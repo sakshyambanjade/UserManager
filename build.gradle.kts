@@ -5,38 +5,47 @@ plugins {
 }
 
 version = "0.1"
-group = "umanager"
+group = "com.examplecrud"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.micronaut.servlet:micronaut-servlet-processor")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.data:micronaut-data-tx-hibernate")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     compileOnly("io.micronaut:micronaut-http-client")
+    compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("com.h2database:h2")
     testImplementation("io.micronaut:micronaut-http-client")
 }
 
 
 application {
-    mainClass = "umanager.Application"
+    mainClass = "com.examplecrud.Application"
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("17")
-    targetCompatibility = JavaVersion.toVersion("17")
+    sourceCompatibility = JavaVersion.toVersion("21")
+    targetCompatibility = JavaVersion.toVersion("21")
 }
 
 
 graalvmNative.toolchainDetection = false
 micronaut {
-    runtime("netty")
+    runtime("tomcat")
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("umanager.*")
+        annotations("com.examplecrud.*")
     }
     aot {
     // Please review carefully the optimizations enabled below
@@ -52,5 +61,9 @@ micronaut {
     }
 }
 
+
+tasks.named<io.micronaut.gradle.docker.NativeImageDockerfile>("dockerfileNative") {
+    jdkVersion = "21"
+}
 
 

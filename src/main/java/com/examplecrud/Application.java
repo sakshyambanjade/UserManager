@@ -1,4 +1,4 @@
-package umanager;
+package com.examplecrud;
 
 import io.micronaut.runtime.Micronaut;
 
