@@ -1,43 +1,19 @@
-## Micronaut 4.5.0 Documentation
+# UserManager
+UserManagerPro is a user management application built using the Micronaut framework. It provides robust role-based access control, reactive programming capabilities, and secure authentication and authorization using Apero-Cas. This application is designed to manage user roles and permissions efficiently, ensuring high security and scalability.
 
-- [User Guide](https://docs.micronaut.io/4.5.0/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.5.0/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.5.0/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+Features
+-Role-Based Access Control: Define and manage user roles such as ROLE_SUPER, ROLE_MAKER, ROLE_CHECKER, and ROLE_VIEW, each with specific permissions and actions.
+-Reactive Programming: Leverage reactive-core to implement reactive programming paradigms, ensuring high performance and responsiveness.
+-Secure Authentication and Authorization: Use Apero-Cas for secure user authentication and authorization.
+-User Management: Create, approve, and manage users with a streamlined workflow.
+-Scalability: Built to handle a growing number of users and roles efficiently.
+-User-Friendly Interface: Clear and intuitive interface for managing users and roles.
 
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
-
-
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-
-## Feature serialization-jackson documentation
-
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
-
-
-## Feature lombok documentation
-
-- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
-
-- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
-
-
-## Feature hibernate-jpa documentation
-
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
-
-## Feature tomcat-server documentation
-
-- [Micronaut Tomcat Server documentation](https://micronaut-projects.github.io/micronaut-servlet/latest/guide/index.html#tomcat)
+Included Features:
+data-jpa
+h2
+hibernate-jpa
+lombok
+tomcat-server
 
 
