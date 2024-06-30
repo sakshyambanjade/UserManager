@@ -8,3 +8,11 @@ Features
 -User Management: Create, approve, and manage users with a streamlined workflow.
 -Scalability: Built to handle a growing number of users and roles efficiently.
 -User-Friendly Interface: Clear and intuitive interface for managing users and roles.
+
+Included Features:
+data-jpa
+h2
+hibernate-jpa
+lombok
+tomcat-server
+
